@@ -1,0 +1,92 @@
+{% extends "layouts/base.html" %}
+
+{% block title %} Dashboard
+{% endblock %}
+
+<!-- Specific CSS goes HERE -->
+{% block stylesheets %}{% endblock stylesheets %}
+
+{% block content %}
+
+<div class="pcoded-content">
+  <div class="pcoded-inner-content">
+    <!-- [ breadcrumb ] start -->
+
+    <!-- [ breadcrumb ] end -->
+    <div class="main-body">
+      <div class="page-wrapper">
+        <!-- [ Main Content ] start -->
+        <div class="row">
+          <!--[ daily sales section ] start-->
+          <!--[ Recent Users ] start-->
+          <div class="col">
+            <div class="card Recent-Users">
+              <div class="card-header">
+                <h5>Modellübersicht</h5>
+              </div>
+              <div class="card-block px-0 py-3">
+                <div class="table-responsive">
+                  <table class="table table-hover">
+                    <tbody>
+                      {% for model in models %}
+                      <tr class="unread">
+                        <ol>
+                          <td><img class="rounded-circle" style="width:40px;"
+                              src="/static/assets/images/user/avatar-1.jpg" alt="activity-user">
+                            <p class="m-0">{{model.username}}</p>
+                          </td>
+                          <td>
+                            <h6 class="mb-1">{{model.name}}
+                            </h6>
+                            <p class="m-0">{{model.category}}</p>
+                          </td>
+                          <td>
+                            <p class="m-0">
+                              {{model.definition}}
+                            </p>
+                          </td>
+                          <td>
+                            <h6 class="mb-1">{{model.input}}
+                            </h6>
+                            <p class="m-0">
+                              {{model.definitioninput}}
+                            </p>
+                          </td>
+                          <td>
+                            <h6 class="text-muted"><i
+                                class="fas fa-circle text-c-green f-10 m-r-15"></i>{{model.timecreate}}
+                            </h6>
+                          </td>
+                          <td><a href="/model-update/{{model.id}}" class="label theme-bg2 text-white f-12">Editieren</a>
+                          </td>
+                          <td><a href="#}" class="label theme-bg text-white f-12">Löschen</a>
+                          </td>
+                        </ol>
+                      </tr>
+                      {% endfor %}
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--[ Recent Users ] end-->
+        </div>
+        <div style='position: fixed; display: flex; bottom: 10px; right: 10px'>
+          <a href="/model-create"
+            style="height: 75px; padding:10px; width: 75px; border-radius: 50%; background-color: white">
+            <svg id="sandy" viewBox='0 0 100 100'>
+              <line x1="50" y1="0" x2="50" y2="100" stroke-width="10px" stroke="grey" />
+              <line x1="0" y1="50" x2="100" y2="50" stroke-width="10px" stroke="grey" />
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock content %}
+
+<!-- Specific Page JS goes HERE  -->
+{% block javascripts %}{% endblock javascripts %}

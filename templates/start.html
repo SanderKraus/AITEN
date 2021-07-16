@@ -1,0 +1,163 @@
+{% extends "layouts/base.html" %}
+
+{% block title %} Dashboard {% endblock %}
+
+<!-- Specific CSS goes HERE -->
+{% block stylesheets %}{% endblock stylesheets %}
+
+{% block content %}
+<div class="pcoded-content">
+  <div class="pcoded-inner-content">
+    <!-- [ breadcrumb ] start -->
+
+    <!-- [ breadcrumb ] end -->
+    <div class="main-body">
+      <div class="page-wrapper">
+        <!-- [ Main Content ] start -->
+
+        <div class="row">
+
+          <div class="col">
+            <h1 class="display-2">AITEN</h1>
+          </div>
+          <div class="col-5"></div>
+        </div>
+        <div class="row">
+
+          <div class="col">
+            <h1 class="display-5">(Artivicial Inteligence Toolkit for Engineering)</h1>
+          </div>
+          <div class="col-1"></div>
+        </div>
+        <div class="row m-5">
+          <div class="col">
+            <div class="row">
+              <div class="col-1"></div>
+              <div class="col">
+                <h2>Predictive Quality</h2>
+              </div>
+              <div class="col-1"></div>
+            </div>
+            <div class="row">
+              <div class="col-1"></div>
+              <div class="col m-3">
+                <h3>understanding the patterns in the data
+                </h3>
+              </div>
+              <div class="col-1"></div>
+            </div>
+            <div class="row">
+              <div class="col-1"></div>
+              <div class="col m-3">
+                <h3>determining the areas of greatest risk
+                </h3>
+              </div>
+              <div class="col-1"></div>
+            </div>
+            <div class="row">
+              <div class="col-1"></div>
+              <div class="col m-3">
+                <h3>directing resources before the risk becomes a reality
+                </h3>
+              </div>
+              <div class="col-1"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <!--[ daily sales section ] start-->
+          <div class="col-md-6 col-xl-4">
+            <div class="card daily-sales">
+              <div class="card-block">
+                <h3 class="mb-4">Data</h3>
+                <div class="row d-flex align-items-center">
+                  <div class="col">
+                    <div class="row">
+                      <div class="col">
+                        <a class="w-100 btn btn-info mt-1" href="/sensors">Sensors</a>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col">
+                        <a class="w-100 btn btn-info mt-1" href="/osensors">Other Sensors</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--[ daily sales section ] end-->
+
+          <!--[ Monthly  sales section ] starts-->
+          <div class="col-md-6 col-xl-4">
+            <div class="card Monthly-sales">
+              <div class="card-block">
+                <h3 class="mb-4">Predictive Models Insights</h3>
+                <div class="row d-flex align-items-center">
+                  <div class="col">
+                    <div class="row">
+                      <div class="col">
+                        <a class="w-100 btn btn-info mt-1" href="/pafq">Predictive Algoritms for
+                          Quality
+                        </a>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col">
+                        <a class="w-100 btn btn-info mt-1" href="/darc">Diagnostic Analysis
+                          &Root
+                          Cause/Anomaly Detection
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--[ Monthly  sales section ] end-->
+
+          <!--[ year  sales section ] starts-->
+          <div class="col-md-12 col-xl-4">
+            <div class="card yearly-sales">
+              <div class="card-block">
+                <h3 class="mb-4">Early Warnings</h3>
+                <div class="row d-flex align-items-center">
+                  <div class="col">
+                    <div class="row">
+                      <div class="col">
+                        <a class="w-100 btn btn-info mt-1" href="/recom">Recommendations and
+                          decision support
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--[ year  sales section ] end-->
+        </div>
+
+        <div class="row m-3" style="background-color: aqua;">
+          <div class="col-5"></div>
+          <h1 class="display-5">Real Time</h1>
+          <div class="col-5"></div>
+        </div>
+        <div class="row m-3" style="background-color: aqua;">
+          <div class="col-5"></div>
+          <h1 class="display-5">Automation</h1>
+          <div class="col-5"></div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+{% endblock content %}
+
+<!-- Specific Page JS goes HERE  -->
+{% block javascripts %}{% endblock javascripts %}
